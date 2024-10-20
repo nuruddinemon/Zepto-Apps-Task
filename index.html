@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books Library</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <a href="index.html" class="logo">Book Library</a>
+          <div class="nav-links">
+            <input type="text" id="search" placeholder="Search by title..." />
+            <select id="genre-filter">
+              <option value="">All Genres</option>
+              <!-- Add options dynamically from JS -->
+            </select>
+          </div>
+          <div class="nav-links">
+            <a href="wishlist.html">Wishlist</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="loading">
+        <div class="loader"></div>
+      </div>
+
+      <div id="book-grid" class="book-grid">
+        <!-- Books will be rendered here -->
+      </div>
+      <div class="pagination">
+        <button id="prevPage" disabled>Previous</button>
+        <span id="currentPage">1</span>
+        <button id="nextPage">Next</button>
+      </div>
+    </main>
+
+    <script src="src/js/app.js"></script>
+  </body>
+</html>

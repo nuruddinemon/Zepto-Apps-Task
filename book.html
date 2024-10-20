@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Details</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <style>
+      .book-details {
+        background-color: #fff;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .book-cover {
+        width: 200px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      .book-title {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+      .book-title:hover {
+        color: black;
+        text-decoration: none;
+        cursor: none;
+      }
+      .book-author,
+      .book-genre,
+      .book-id,
+      .book-downloads,
+      .book-description {
+        margin: 10px 0;
+      }
+
+      .book-details a {
+        background-color: #008cba;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+      }
+
+      .book-details a:hover {
+        background-color: #005f5f;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <a href="index.html" class="logo">Book Library</a>
+          <div class="nav-links">
+            <input type="text" id="search" placeholder="Search by title..." />
+            <select id="genre-filter">
+              <option value="">All Genres</option>
+              <!-- Add options dynamically from JS -->
+            </select>
+          </div>
+          <div class="nav-links">
+            <a href="wishlist.html">Wishlist</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div id="book-details-container">
+      <!-- Book details will be dynamically loaded here -->
+    </div>
+
+    <script src="src/js/book.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <a href="index.html" class="logo">Book Library</a>
+          <div class="nav-links">
+            <input type="text" id="search" placeholder="Search by title..." />
+            <select id="genre-filter">
+              <option value="">All Genres</option>
+              <!-- Add options dynamically from JS -->
+            </select>
+          </div>
+          <div class="nav-links">
+            <a href="wishlist.html">Wishlist</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="wishlist-grid" class="book-grid">
+        <!-- Wishlist items will be rendered here -->
+      </div>
+    </main>
+
+    <script src="src/js/wishlist.js"></script>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+/* Basic resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+main {
+  padding: 20px;
+}
+
+/* Navbar */
+header {
+  background-color: #333;
+  padding: 2rem;
+  color: white;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  background-color: #008cba;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.nav-links a:hover {
+  background-color: #005f5f;
+}
+
+.nav-links #search,
+.nav-links #genre-filter {
+  padding: 10px;
+  width: 45%;
+  border-radius: 5px;
+  outline: none;
+}
+/* loading */
+.loader {
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  color: #008cba;
+  border: 2px solid;
+  position: relative;
+  margin: 1rem auto;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: l6 2s infinite;
+}
+@keyframes l6 {
+  100% {
+    inset: 0;
+  }
+}
+
+/* Books Grid */
+.book-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 20px;
+}
+
+.book-card {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.book-cover {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.book-title {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.book-title:hover {
+  text-decoration: underline;
+  color: #008cba;
+}
+.book-author {
+  font-size: 0.9rem;
+  color: grey;
+}
+
+.book-genre {
+  font-size: 0.8rem;
+  margin: 5px 0;
+}
+
+.wishlist-btn {
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+/* Pagination */
+.pagination {
+  margin: 20px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pagination button {
+  background-color: #008cba;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.pagination button:disabled {
+  cursor: not-allowed;
+}
+@media (max-width: 1024px) {
+  .book-grid {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 768px) {
+  header .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #search,
+  #genre-filter {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .book-grid {
+    grid-template-columns: auto;
+  }
+}
